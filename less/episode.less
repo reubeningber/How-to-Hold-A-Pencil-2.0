@@ -1,0 +1,174 @@
+.episode {
+	width: 90%;
+	margin: 0 auto;
+	.clearfix();
+	
+	&.multiple {
+		width: 48%;
+		margin-bottom: 15px;
+		float: left;
+
+		&:nth-child(odd) {
+			margin: 0 4% 0 0;
+		}
+
+		.episode-title {
+			font-size: 30px;
+			.lh-transition(color 200 linear);
+		}
+
+		.episode-number {
+			font-size: 18px;
+			margin-top: 10px;
+			.lh-transition(color 200 linear);
+		}
+
+		&:hover {
+			.episode-title,
+			.episode-number {
+				color: @yellow;
+				.lh-transition(color 200 linear);
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			width: 90%;
+			margin: 0 auto 15px auto;
+			float: none;
+
+			.episode-title {
+				font-size: 24px;
+			}
+
+			.episode-number {
+				font-size: 14px;
+				margin-top: 5px;
+			}
+
+			&:nth-child(odd) {
+				margin: 0 auto 15px auto;
+			}
+		}
+
+	}
+	ul {
+		list-style-type: none;
+	}
+
+
+	.episode-full {
+		margin: 0 auto;
+		.clearfix();
+	}
+	.episode-img-container {
+		width: 100%;
+		margin: 0 auto;
+
+		.episode-img {
+			width: 100%;
+		}
+	}
+
+	.episode-title {
+		font-family: 'Stratum1-Black';
+		font-size: 50px;
+		float: left;
+		.clearfix();
+	}
+
+	.episode-sub-hd {
+		font-family: 'Stratum1-Black';
+	}
+
+	.episode-number {
+		font-family: 'Stratum1-Black';
+		font-size: 25px;
+		float: right;
+		display: block;
+		margin-top: 20px;
+		.clearfix();
+	}
+
+	.episode-notes {
+		float: left;
+		width: 61%;
+		margin-right: 4%;
+		padding-top: 25px;
+		font-size: 16px; 
+		.clearfix();
+	}
+
+	.episode-sponsors {
+		float: right;
+		text-align: center;
+		width: 35%;
+
+		.episode-sponsor {
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.episode-share-bar {
+		clear: both;
+		padding-top: 25px;
+
+
+		ul {
+			li {
+				display: inline;
+				margin: 0 2px;
+				font-size: 12px;
+
+				a {
+					color: @blue;
+					.lh-opacity(.75);
+					.lh-transition(opacity 300 ease);
+				}
+
+				&:hover {
+					a {
+						.lh-opacity(1);
+					}
+				}
+
+				&.social-title {
+					color: @blue;
+					font-size: 16px;
+					font-family: 'Playfair Display', serif;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.episode-notes, 
+		.episode-sponsors {
+			float: none;
+			width: 100%;
+		}
+
+		.episode-sponsor {
+			width: 48%;
+			float: left; 
+
+			&:first-child {
+				margin-right: 4%;
+			}
+		}
+	}
+	@media screen and (max-width: 500px) {
+		.episode-title {
+			font-size: 40px;
+		} 
+		.episode-number {
+			font-size: 20px;
+		}	
+	}	
+}
+
+.episode-wrapper {
+	margin: 0 auto;
+	.clearfix();
+}

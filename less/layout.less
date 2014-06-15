@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	color: @blue;
+}
+
+.secondary {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 30%;
+	height: 100%;
+	padding-top: 50px;
+	background: @blue;
+	.clearfix();
+}
+
+.primary {
+	float: right;
+	width: 70%;
+	height: 100%;
+	padding: 50px 25px;
+	.lh-box-sizing(border-box);
+	background: @off-white;
+	.clearfix();
+}
+
+@media screen and (max-width: 768px) {
+	.secondary {
+		position: initial;
+		width: 100%;
+	}
+
+	.primary {
+		float: none;
+		width: 100%;
+	}	
+}
+

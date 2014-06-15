@@ -1,0 +1,46 @@
+.main-nav {
+	width: 90%;
+	margin: 0 auto;
+
+	ul {
+		list-style-type: none;
+
+		li {
+			padding: 10px 0;
+			border-bottom: 1px solid @white;
+			background: transparent;
+			.lh-transition(background-color 500 linear);
+
+
+			a {
+				font-size: 20px;
+				color: @white;
+				text-decoration: none;
+				.lh-opacity(1);
+				
+			}
+
+			&:hover {
+				.lh-transition(background-color 500 linear);
+				background: @white;
+
+				a {
+					color: @blue;
+				}
+			}
+		}
+	}
+}
+
+.episode-nav {
+	width: 90%;
+	margin: 20px auto 0 auto;
+
+	.next {
+		float: left;
+	}
+
+	.prev {
+		float: right;
+	}
+}
