@@ -30,6 +30,47 @@
 			}
 		}
 	}
+
+	@media screen and (max-width: 768px) {
+		width: 90%;
+		margin: 0 auto; 
+		display: block;
+
+		ul {
+			.clearfix();
+
+			li {
+				padding: 0;
+				display: inline-block;
+				border: none;
+				margin-right: 5px;
+
+				a {
+					font-size: 20px;
+				}
+
+				&:hover {
+					background: none;
+
+					a {
+						color: @white;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 400px) {
+		ul {
+			li {
+				a {
+					font-size: 16px;
+				}
+			}
+		}
+		
+	}
 }
 
 .episode-nav {

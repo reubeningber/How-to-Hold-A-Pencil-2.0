@@ -57,6 +57,21 @@ header {
   font-size: 20px;
   color: #ffffff;
 }
+@media screen and (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+  .logo {
+    width: 65%;
+    margin-bottom: 10px;
+  }
+  .social .social-link {
+    font-size: 10px;
+  }
+  .social .social-link.title {
+    display: none;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -364,6 +379,46 @@ body {
 }
 .main-nav ul li:hover a {
   color: #424d54;
+}
+@media screen and (max-width: 768px) {
+  .main-nav {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+  .main-nav ul {
+    zoom: 1;
+  }
+  .main-nav ul:before {
+    content: '';
+    display: block;
+  }
+  .main-nav ul:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .main-nav ul li {
+    padding: 0;
+    display: inline-block;
+    border: none;
+    margin-right: 5px;
+  }
+  .main-nav ul li a {
+    font-size: 20px;
+  }
+  .main-nav ul li:hover {
+    background: none;
+  }
+  .main-nav ul li:hover a {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main-nav ul li a {
+    font-size: 16px;
+  }
 }
 .episode-nav {
   width: 90%;
