@@ -360,6 +360,7 @@ body {
   transition: background-color 500ms linear;
 }
 .main-nav ul li a {
+  width: 100%;
   font-size: 20px;
   color: #ffffff;
   text-decoration: none;
