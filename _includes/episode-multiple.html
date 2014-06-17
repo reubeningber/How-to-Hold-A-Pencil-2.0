@@ -1,12 +1,14 @@
+{% for post in posts %}
 <article class="episode multiple">
-	<a href="#">
+	<a href="{{post.url}}">
 		<div class="episode-img-container">
-			<img src="http://placehold.it/900x500&text=Episode_Photo" alt="" class="episode-img">
+			<img src="{{post.meta['episode-img']}}" alt="" class="episode-img">
 		</div>
 
 		<div class="episode-full">
-			<h1 class="episode-title">Reuben Ingber</h1>
-			<span class="episode-number">(No. XXX)</span>
+			<h1 class="episode-title">{{post.title}}</h1>
+			<span class="episode-number">(No. {{post.meta['episode-number']}})</span>
 		</div>
 	</a>
 </article>
+{% endfor %}

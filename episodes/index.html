@@ -22,18 +22,12 @@
 
     <body>
        <div class="container">
-
             {% include 'includes/header' %}
-
-            {% if current.title == 'Home' %}
-            
-                {% include 'includes/episode-single' %}
-    
-            {% else %}
-        
-                {% include 'includes/page-template' %}
-        
-            {% endif %}
+            <div class="primary">
+                <div class="episode-wrapper">
+                    {% include 'includes/episode-multiple' %}
+                </div>
+            </div>
        </div> 
     </body>
 </html>

@@ -118,6 +118,7 @@ body {
   .secondary {
     position: initial;
     width: 100%;
+    height: inherit;
   }
   .primary {
     float: none;
@@ -261,6 +262,11 @@ body {
   display: table;
   clear: both;
 }
+.episode .episode-notes.no-sponsors {
+  float: none;
+  width: 100%;
+  margin-right: none;
+}
 .episode .episode-sponsors {
   float: right;
   text-align: center;
@@ -362,6 +368,9 @@ body {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
+}
+.main-nav ul li.active a {
+  font-weight: 600;
 }
 .main-nav ul li:hover {
   -webkit-transition: background-color 500ms linear;
