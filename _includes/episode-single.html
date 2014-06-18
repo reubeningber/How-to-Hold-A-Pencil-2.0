@@ -1,5 +1,5 @@
 <div class="primary">
-	{% for post in site.pages.episodes.posts limit: 1 %}
+	{% for post in site.pages.episodes.posts limit: 1%}
 	<article class="episode single">
 		<div class="episode-img-container">
 			<img src="{{post.meta['episode-img']}}" alt="" class="episode-img">
@@ -49,16 +49,15 @@
 	<nav class="episode-nav">
 		{% if post.next %}
 		<div class="next">
-			<a href="{{ post.next.url }}"><i class="fa fa-caret-left"></i> Next Episode</a>
+			<a href="{{ post.next.permalink }}"><i class="fa fa-caret-left"></i> Next Episode</a>
 		</div>
 		{% endif %}
 	
-		{% comment %}{% if prev %}
+		{% if post.previous %}
 		<div class="prev">
-			<a href="{{ post.prev.url }} ">Previous Episode <i class="fa fa-caret-right"></i></a>
+			<a href="{{ post.previous.permalink }} ">Previous Episode <i class="fa fa-caret-right"></i></a>
 		</div>
-		{% endif %}{% endcomment %}
+		{% endif %}
 	</nav>
-
 	{% endfor %}
 </div>

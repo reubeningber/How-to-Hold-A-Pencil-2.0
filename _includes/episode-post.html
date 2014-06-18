@@ -1,5 +1,5 @@
 <div class="primary">
-	{% for episode in posts %}
+	{% assign post = current %}
 	<article class="episode single">
 		<div class="episode-img-container">
 			<img src="{{post.meta['episode-img']}}" alt="" class="episode-img">
@@ -47,18 +47,16 @@
 	</article>
 
 	<nav class="episode-nav">
-		{% if post.next %}
+		{% if next %}
 		<div class="next">
-			<a href="{{ post.next.url }}"><i class="fa fa-caret-left"></i> Next Episode</a>
+			<a href="{{ post.next.permalink }}"><i class="fa fa-caret-left"></i> Next Episode</a>
 		</div>
 		{% endif %}
 	
-		{% comment %}{% if prev %}
+		{% if previous %}
 		<div class="prev">
-			<a href="{{ post.prev.url }} ">Previous Episode <i class="fa fa-caret-right"></i></a>
+			<a href="{{ post.prev.permalink }} ">Previous Episode <i class="fa fa-caret-right"></i></a>
 		</div>
-		{% endif %}{% endcomment %}
+		{% endif %}
 	</nav>
-
-	{% endfor %}
 </div>
