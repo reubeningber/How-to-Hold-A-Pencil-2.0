@@ -1,30 +1,5 @@
-<html>
-    <head>
-        <meta charset='UTF-8'>
-        <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+{% capture content %}
+    {% include 'includes/episode-single' %}
+{% endcapture %}
 
-        <title>{{ site.title }} - {{ current.title }}</title>
-
-        <meta name='description' content='{{ site.meta.description }}'>
-        <meta name="viewport" content="initial-scale=1">
-
-       
-        <link type="application/rss+xml" rel="alternate" title="How to Hold a Pencil" href="{{ site.meta.feed_url }}">
-        
-        <!-- Main Style -->
-        <link rel="stylesheet" href="../css/style.css">
-
-        <!-- Fonts -->
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,700italic' rel='stylesheet' type='text/css'>
-    </head>
-
-    <body>
-       <div class="container">
-            {% include 'includes/header' %}
-            {% include 'includes/episode-single' %}
-            </div>
-       </div> 
-    </body>
-</html>
+{% include 'layouts/default' %}

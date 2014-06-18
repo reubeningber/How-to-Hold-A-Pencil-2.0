@@ -1,14 +1,18 @@
-{% for post in posts %}
-<article class="episode multiple">
-	<a href="{{post.url}}">
-		<div class="episode-img-container">
-			<img src="{{post.meta['episode-img']}}" alt="" class="episode-img">
-		</div>
+<div class="primary">
+    <div class="episode-wrapper">
+		{% for post in posts %}
+		<article class="episode multiple">
+			<a href="{{post.url}}">
+				<div class="episode-img-container">
+					<img src="{{post.meta['episode-img']}}" alt="" class="episode-img">
+				</div>
 
-		<div class="episode-full">
-			<h1 class="episode-title">{{post.title}}</h1>
-			<span class="episode-number">(No. {{post.meta['episode-number']}})</span>
-		</div>
-	</a>
-</article>
-{% endfor %}
+				<div class="episode-full">
+					<h1 class="episode-title">{{post.title}}</h1>
+					<span class="episode-number">(No. {{post.meta['episode-number']}})</span>
+				</div>
+			</a>
+		</article>
+		{% endfor %}
+	</div>
+</div>
