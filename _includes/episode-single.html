@@ -11,7 +11,7 @@
 		</div>
 		
 		<div class="episode-player">
-			<iframe frameborder='0' height='36px' scrolling='no' seamless src='https://simplecast.fm/e/{{2769}}?style=dark' width='100%'></iframe>
+			<iframe frameborder='0' height='36px' scrolling='no' seamless src='https://simplecast.fm/e/{{post.meta['episode-player-id']}}?style=dark' width='100%'></iframe>
 		</div>
 		
 		{% if post.meta['episode-sponsored'] == 'Yes' %}
@@ -23,8 +23,8 @@
 			<div class="episode-sponsors">
 				<h2 class="episode-sub-hd">Sponsors</h2>
 				<ul>
-					<li class="episode-sponsor"><a href="#"><img src="http://placehold.it/250x75" alt=""></a></li>
-					<li class="episode-sponsor"><a href="#"><img src="http://placehold.it/250x75" alt=""></a></li>
+					<li class="episode-sponsor"><a href="{{post.meta['episode-sponsor-url-2']}}"><img src="{{post.meta['episode-sponsor-1']}}" alt=""></a></li>
+					<li class="episode-sponsor"><a href="{{post.meta['episode-sponsor-url-2']}}"><img src="{{post.meta['episode-sponsor-2']}}" alt=""></a></li>
 				</ul>
 			</div>
 		{% else %}
@@ -47,13 +47,17 @@
 	</article>
 
 	<nav class="episode-nav">
+		{% if post.next %}
 		<div class="next">
-			<a href="#"><i class="fa fa-caret-left"></i> Next Episode</a>
+			<a href="{{ post.next.url }}"><i class="fa fa-caret-left"></i> Next Episode</a>
 		</div>
-
+		{% endif %}
+	
+		{% comment %}{% if prev %}
 		<div class="prev">
-			<a href="#">Previous Episode <i class="fa fa-caret-right"></i></a>
+			<a href="{{ post.prev.url }} ">Previous Episode <i class="fa fa-caret-right"></i></a>
 		</div>
+		{% endif %}{% endcomment %}
 	</nav>
 
 	{% endfor %}
