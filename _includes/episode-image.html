@@ -1,0 +1,7 @@
+<div class="episode-img-container">
+	{% if post.meta['episode-img'] == null %}
+		<img src="/assets/default.jpg" alt="" class="episode-img">
+	{% else %}
+		<img src="{{post.meta['episode-img']}}" alt="" class="episode-img">
+	{% endif %}
+</div>
