@@ -1,19 +1,22 @@
 .main-nav {
 	width: 90%;
-	margin: 0 auto;
+	margin: 15px auto;
 
 	ul {
 		list-style-type: none;
 
 		li {
-			padding: 10px 0;
+			padding: 10px 10px;
+			.lh-box-sizing(border-box);
 			border-bottom: 1px solid @white;
 			background: transparent;
-			.lh-transition(background-color 500 linear);
+			border-left: 5px solid transparent;
+			.lh-transition(border-left 100 linear);
 
 
 			a {
 				width: 100%;
+				display: block;
 				font-size: 20px;
 				color: @white;
 				text-decoration: none;
@@ -28,11 +31,12 @@
 			}
 
 			&:hover {
-				.lh-transition(background-color 500 linear);
-				background: @white;
+				.lh-transition(border-left 200 linear);
+				border-left: 5px solid @yellow;
+				
 
 				a {
-					color: @blue;
+					color: @white;
 				}
 			}
 		}
@@ -77,18 +81,5 @@
 			}
 		}
 		
-	}
-}
-
-.episode-nav {
-	width: 90%;
-	margin: 20px auto 0 auto;
-
-	.next {
-		float: left;
-	}
-
-	.prev {
-		float: right;
 	}
 }

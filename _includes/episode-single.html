@@ -1,9 +1,6 @@
-<div class="primary">
-	{% for post in site.pages.episodes.posts limit: 1%}
+{% for post in site.pages.episodes.posts limit: 1%}
 	<article class="episode single">
-		<div class="episode-img-container">
-			<img src="{{post.meta['episode-img']}}" alt="" class="episode-img">
-		</div>
+		{% include 'includes/episode-image' %}
 
 		<div class="episode-full">
 			<h1 class="episode-title">{{ post.title }}</h1>
@@ -35,5 +32,4 @@
 
 		{% include 'includes/episode-share-bar' %}
 	</article>
-	{% endfor %}
-</div>
+{% endfor %}

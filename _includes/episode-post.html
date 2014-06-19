@@ -1,55 +1,38 @@
-<div class="primary">
-	{% assign post = current %}
-	<article class="episode single">
-		<div class="episode-img-container">
-			<img src="{{post.meta['episode-img']}}" alt="" class="episode-img">
-		</div>
+{% assign post = current %}
 
-		<div class="episode-full">
-			<h1 class="episode-title">{{ post.title }}</h1>
-			<span class="episode-number">(No. {{post.meta['episode-number']}})</span>
-		</div>
-		
-		<div class="episode-player">
-			<iframe frameborder='0' height='36px' scrolling='no' seamless src='https://simplecast.fm/e/{{post.meta['episode-player-id']}}?style=dark' width='100%'></iframe>
-		</div>
-		
-		{% if post.meta['episode-sponsored'] == 'Yes' %}
-			<div class="episode-notes editable-content">
-				{{post.body}}
-			</div>
+<article class="episode single">
+	{% include 'includes/episode-image' %}
 
-			
-			<div class="episode-sponsors">
-				<h2 class="episode-sub-hd">Sponsors</h2>
-				<ul>
-					<li class="episode-sponsor"><a href="{{post.meta['episode-sponsor-url-2']}}"><img src="{{post.meta['episode-sponsor-1']}}" alt=""></a></li>
-					<li class="episode-sponsor"><a href="{{post.meta['episode-sponsor-url-2']}}"><img src="{{post.meta['episode-sponsor-2']}}" alt=""></a></li>
-				</ul>
-			</div>
-		{% else %}
-			<div class="episode-notes no-sponsors editable-content">
-				{{post.body}}
-			</div>
-		
-		{% endif %}
-
-		
-		{% include 'includes/episode-share-bar' %}
-
-	</article>
-
-	<nav class="episode-nav">
-		{% if next %}
-		<div class="next">
-			<a href="{{ post.next.permalink }}"><i class="fa fa-caret-left"></i> Next Episode</a>
-		</div>
-		{% endif %}
+	<div class="episode-full">
+		<h1 class="episode-title">{{ post.title }}</h1>
+		<span class="episode-number">(No. {{post.meta['episode-number']}})</span>
+	</div>
 	
-		{% if previous %}
-		<div class="previous">
-			<a href="{{ post.previous.permalink }} ">Previous Episode <i class="fa fa-caret-right"></i></a>
+	<div class="episode-player">
+		<iframe frameborder='0' height='36px' scrolling='no' seamless src='https://simplecast.fm/e/{{post.meta['episode-player-id']}}?style=dark' width='100%'></iframe>
+	</div>
+	
+	{% if post.meta['episode-sponsored'] == 'Yes' %}
+		<div class="episode-notes editable-content">
+			{{post.body}}
 		</div>
-		{% endif %}
-	</nav>
-</div>
+
+		
+		<div class="episode-sponsors">
+			<h2 class="episode-sub-hd">Sponsors</h2>
+			<ul>
+				<li class="episode-sponsor"><a href="{{post.meta['episode-sponsor-url-2']}}"><img src="{{post.meta['episode-sponsor-1']}}" alt=""></a></li>
+				<li class="episode-sponsor"><a href="{{post.meta['episode-sponsor-url-2']}}"><img src="{{post.meta['episode-sponsor-2']}}" alt=""></a></li>
+			</ul>
+		</div>
+	{% else %}
+		<div class="episode-notes no-sponsors editable-content">
+			{{post.body}}
+		</div>
+	
+	{% endif %}
+
+	
+	{% include 'includes/episode-share-bar' %}
+
+</article>

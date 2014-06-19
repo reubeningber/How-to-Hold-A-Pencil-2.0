@@ -23,8 +23,12 @@
 
     <body>
        <div class="container">
-             {% include 'includes/header' %}
-             {{ content }}
+            <div class="secondary">
+                {% include 'includes/header' %}
+            </div>
+            <div class="primary">
+                {{ content }}
+            </div>
         </div>
     </body>
 </html>

@@ -1,19 +1,17 @@
-<div class="secondary">
-	<header>
-		<a href="{{site.permalink}}" class="logo"><img src="{{site.meta['Logo']}}" alt=""></a>
+<header>
+	<a href="{{site.permalink}}" class="logo"><img src="{{site.meta['Logo']}}" alt=""></a>
 
-		<nav class="main-nav">
-			<ul>
-				{% for page in site.pages %}
-				<li {% if page.url == url %}class="active"{% endif %}><a href="{{page.url}}">{{page.title}}</a></li>
-				{% endfor %}
-			</ul>
-		</nav>
-
-		<ul class="social">
-			<li class="social-link"><a href="http://twitter.com/{{site.meta['Twitter Handle']}}"><i class="fa fa-twitter fa-2x"></i></a></li>
-			<li class="social-link"><a href="{{site.meta['RSS Link']}}"><i class="fa fa-rss fa-2x"></i></a></li>
-			<li class="social-link"><a href="{{site.meta['iTunes URL']}}"><i class="fa fa-music fa-2x"></i></a></li>
+	<nav class="main-nav">
+		<ul>
+			{% for page in site.pages %}
+			<li {% if page.url == url %}class="active"{% endif %}><a href="{{page.url}}">{{page.title}}</a></li>
+			{% endfor %}
 		</ul>
-	</header>
-</div>
+	</nav>
+
+	<ul class="social">
+		<li class="social-link"><a href="http://twitter.com/{{site.meta['Twitter Handle']}}"><i class="fa fa-twitter fa-2x"></i></a></li>
+		<li class="social-link"><a href="{{site.meta['RSS Link']}}"><i class="fa fa-rss fa-2x"></i></a></li>
+		<li class="social-link"><a href="{{site.meta['iTunes URL']}}"><i class="fa fa-music fa-2x"></i></a></li>
+	</ul>
+</header>

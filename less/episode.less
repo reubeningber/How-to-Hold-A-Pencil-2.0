@@ -5,7 +5,7 @@
 	
 	&.multiple {
 		width: 48%;
-		margin-bottom: 15px;
+		margin-bottom: 25px;
 		float: left;
 
 		&:nth-child(odd) {
@@ -23,7 +23,17 @@
 			.lh-transition(color 200 linear);
 		}
 
+		.episode-img-container {
+				.lh-opacity(.75);
+				.lh-transition(opacity 200 ease);
+			}
+
 		&:hover {
+			.episode-img-container {
+				.lh-opacity(1);
+				.lh-transition(opacity 200 ease);
+			}
+
 			.episode-title,
 			.episode-number {
 				color: @yellow;
@@ -94,14 +104,16 @@
 		width: 61%;
 		margin-right: 4%;
 		padding-top: 25px;
-		font-size: 16px; 
+		font-size: 20px; 
 		.clearfix();
 
 		&.no-sponsors {
 			float: none;
 			width: 100%;
-			margin-right: none;
+			margin-right: 0;
 		}
+
+
 	}
 
 	.episode-sponsors {
@@ -153,6 +165,7 @@
 		.episode-sponsors {
 			float: none;
 			width: 100%;
+			font-size: 16px;
 		}
 
 		.episode-sponsor {
