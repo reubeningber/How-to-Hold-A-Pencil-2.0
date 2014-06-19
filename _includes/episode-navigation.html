@@ -1,11 +1,11 @@
 <nav class="episode-nav">
-	{% if next %}
+	{% if post.next %}
 	<div class="next">
 		<a href="{{ post.next.permalink }}"><i class="fa fa-caret-left"></i> Next: {{ post.next.title }}</a>
 	</div>
 	{% endif %}
 
-	{% if previous %}
+	{% if post.previous %}
 	<div class="previous">
 		<a href="{{ post.previous.permalink }} ">Previous: {{ post.previous.title }} <i class="fa fa-caret-right"></i></a>
 	</div>
