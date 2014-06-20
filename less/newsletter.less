@@ -1,0 +1,39 @@
+.newsletter:not( .newsletter--active ) input[type='submit']
+{
+    display: none;
+}
+
+.main-nav {
+	ul {
+		li {
+			&.newsletter-signup {
+				position: relative;
+				margin: 0;
+				padding: 0;
+				border: 0;
+
+				.email {
+					height: 40px;
+					width: 100%;
+					border: none;
+				}
+
+				.submit-btn {
+					position: absolute;
+					right: 0;
+					top: 0;
+					height: 40px;
+					width: 40px;
+					border: none;
+					background-color: @yellow;
+					color: @blue;
+
+					&:hover {
+						background: @blue;
+						color: @yellow;
+					}
+				}
+			}
+		}
+	}
+}

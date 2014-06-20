@@ -229,6 +229,7 @@ body {
   margin: 0 auto;
 }
 .episode .episode-img-container .episode-img {
+  margin: 0 auto;
   width: 100%;
 }
 .episode .episode-title {
@@ -480,4 +481,32 @@ h4,
 h5 {
   font-family: 'Stratum1-Black';
   margin: 10px 0;
+}
+.newsletter:not( .newsletter--active ) input[type='submit'] {
+  display: none;
+}
+.main-nav ul li.newsletter-signup {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.main-nav ul li.newsletter-signup .email {
+  height: 40px;
+  width: 100%;
+  border: none;
+}
+.main-nav ul li.newsletter-signup .submit-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 40px;
+  width: 40px;
+  border: none;
+  background-color: #ffd44c;
+  color: #424d54;
+}
+.main-nav ul li.newsletter-signup .submit-btn:hover {
+  background: #424d54;
+  color: #ffd44c;
 }
