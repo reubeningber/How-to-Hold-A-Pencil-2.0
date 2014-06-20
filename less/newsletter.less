@@ -3,10 +3,14 @@
     display: none;
 }
 
+.email-title {
+	color: @white;
+}
 .main-nav {
 	ul {
 		li {
 			&.newsletter-signup {
+				text-align: center;
 				position: relative;
 				margin: 0;
 				padding: 0;
@@ -15,22 +19,53 @@
 				.email {
 					height: 40px;
 					width: 100%;
-					border: none;
+					padding: 10px;
+					border: 1px solid @white;
+					font-size: 20px;
+					color: @white;
+					background-color: @green;
+					font-family: 'Playfair Display', serif;
+					.lh-transition(backgound-color 200 linear);
+					
+					&::-webkit-input-placeholder {
+					   color: @white;
+					}
+
+					&:-moz-placeholder { /* Firefox 18- */
+					   color:  @white;
+					}
+
+					&::-moz-placeholder {  /* Firefox 19+ */
+					   color:  @white;
+					}
+
+					&:-ms-input-placeholder {  
+					   color:  @white;
+					}
+
+					&:focus {
+						background-color: @blue;
+						.lh-transition(backgound-color 200 linear);
+					}
 				}
 
 				.submit-btn {
 					position: absolute;
 					right: 0;
-					top: 0;
-					height: 40px;
+					top: -1px;
+					height: 41px;
 					width: 40px;
 					border: none;
-					background-color: @yellow;
+					background-color: @white;
+					font-size: 16px;
+					font-family: 'Playfair Display', serif;
 					color: @blue;
+					.lh-transition(color 200 ease);
 
 					&:hover {
-						background: @blue;
 						color: @yellow;
+						.lh-transition(color 300 ease);
+
 					}
 				}
 			}

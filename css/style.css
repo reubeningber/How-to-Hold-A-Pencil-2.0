@@ -485,7 +485,11 @@ h5 {
 .newsletter:not( .newsletter--active ) input[type='submit'] {
   display: none;
 }
+.email-title {
+  color: #ffffff;
+}
 .main-nav ul li.newsletter-signup {
+  text-align: center;
   position: relative;
   margin: 0;
   padding: 0;
@@ -494,19 +498,58 @@ h5 {
 .main-nav ul li.newsletter-signup .email {
   height: 40px;
   width: 100%;
-  border: none;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #9f9c8d;
+  font-family: 'Playfair Display', serif;
+  -webkit-transition: backgound-color 200ms linear;
+  -moz-transition: backgound-color 200ms linear;
+  -o-transition: backgound-color 200ms linear;
+  transition: backgound-color 200ms linear;
+}
+.main-nav ul li.newsletter-signup .email::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.main-nav ul li.newsletter-signup .email:-moz-placeholder {
+  /* Firefox 18- */
+  color: #ffffff;
+}
+.main-nav ul li.newsletter-signup .email::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ffffff;
+}
+.main-nav ul li.newsletter-signup .email:-ms-input-placeholder {
+  color: #ffffff;
+}
+.main-nav ul li.newsletter-signup .email:focus {
+  background-color: #424d54;
+  -webkit-transition: backgound-color 200ms linear;
+  -moz-transition: backgound-color 200ms linear;
+  -o-transition: backgound-color 200ms linear;
+  transition: backgound-color 200ms linear;
 }
 .main-nav ul li.newsletter-signup .submit-btn {
   position: absolute;
   right: 0;
-  top: 0;
-  height: 40px;
+  top: -1px;
+  height: 41px;
   width: 40px;
   border: none;
-  background-color: #ffd44c;
+  background-color: #ffffff;
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;
   color: #424d54;
+  -webkit-transition: color 200ms ease;
+  -moz-transition: color 200ms ease;
+  -o-transition: color 200ms ease;
+  transition: color 200ms ease;
 }
 .main-nav ul li.newsletter-signup .submit-btn:hover {
-  background: #424d54;
   color: #ffd44c;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  -o-transition: color 300ms ease;
+  transition: color 300ms ease;
 }
