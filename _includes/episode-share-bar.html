@@ -2,7 +2,7 @@
 	<ul>
 		<li class="social-title">Share This:</li>
 		<li><a href="https://www.facebook.com/sharer/sharer.php?u={{ post.permalink | UrlEncode }}" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
-		<li><a href="https://twitter.com/intent/tweet?source={{ post.permalink | UrlEncode }}&text=I%20just%20listened%20to%20{{site.title | UrlEncode }}%20with%20{{ post.title | UrlEncode}}-{{ post.permalink | UrlEncode }}&via=holdapencil&related=reubeningber" target="_blank" title="Tweet"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+		<li><a href="https://twitter.com/intent/tweet?source={{ post.permalink | UrlEncode }}&text=I%20just%20listened%20to%20{{site.title | UrlEncode }}%20with%20{{ post.title | UrlEncode}}%20-%20{{ post.permalink | UrlEncode }}&via=holdapencil&related=reubeningber" target="_blank" title="Tweet"><i class="fa fa-twitter-square fa-2x"></i></a></li>
 		<li><a href="https://plus.google.com/share?url={{ post.permalink | UrlEncode }}" target="_blank" title="Share on Google+"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
 		<li><a href="http://pinterest.com/pin/create/button/?url={{ post.permalink | UrlEncode }}&media=http://pencil.siteleaf.net{{post.meta['episode-img'] | UrlEncode }}&description={{ post.title | UrlEncode }}%20on%20{{site.title | UrlEncode }}" target="_blank" title="Pin it"><i class="fa fa-pinterest-square fa-2x"></i></a></li>
 		<li><a href="mailto:?subject=Listen%20To:%20{{ post.title | UrlEncode }}%20on{{ site.title | UrlEncode }}&body=I%20just%20listend%20to%20{{ post.title | UrlEncode }}on%20{{site.title | UrlEncode }}.%20Check%20itout%20-%20{{post.permalink | UrlEncode }}." target="_blank" title="Email"><i class="fa fa-envelope fa-2x"></i></a></li>
