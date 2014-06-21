@@ -379,7 +379,7 @@ body {
 .episode-nav .previous {
   float: right;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .episode-nav .post-nav-name {
     display: none;
   }
