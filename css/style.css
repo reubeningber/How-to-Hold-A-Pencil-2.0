@@ -294,6 +294,9 @@ body {
   text-align: center;
   width: 35%;
 }
+.episode .episode-sponsors .episode-sponsor {
+  margin: 15px 0;
+}
 .episode .episode-sponsors .episode-sponsor img {
   width: 100%;
 }
