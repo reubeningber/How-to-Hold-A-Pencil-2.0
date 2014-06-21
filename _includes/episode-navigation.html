@@ -1,13 +1,13 @@
 <nav class="episode-nav">
 	{% if post.next %}
 	<div class="next">
-		<a href="{{ post.next.permalink }}"><i class="fa fa-caret-left"></i> Next: {{ post.next.title }}</a>
+		<a href="{{ post.next.permalink }}"><i class="fa fa-caret-left"></i> Next<span class="post-nav-name">: {{ post.next.title }}</span></a>
 	</div>
 	{% endif %}
 
 	{% if post.previous %}
 	<div class="previous">
-		<a href="{{ post.previous.permalink }} ">Previous: {{ post.previous.title }} <i class="fa fa-caret-right"></i></a>
+		<a href="{{ post.previous.permalink }} ">Previous<span class="post-nav-name">: {{ post.previous.title }}</span> <i class="fa fa-caret-right"></i></a>
 	</div>
 	{% endif %}
 </nav>
