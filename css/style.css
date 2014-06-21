@@ -491,7 +491,7 @@ h5 {
   margin: 10px 0;
 }
 .newsletter:not( .newsletter--active ) input[type='submit'] {
-  display: none;
+  opacity: 0;
 }
 .email-title {
   color: #ffffff;
@@ -512,10 +512,10 @@ h5 {
   color: #ffffff;
   background-color: #9f9c8d;
   font-family: 'Playfair Display', serif;
-  -webkit-transition: backgound-color 200ms linear;
-  -moz-transition: backgound-color 200ms linear;
-  -o-transition: backgound-color 200ms linear;
-  transition: backgound-color 200ms linear;
+  -webkit-transition: background-color 200ms ease;
+  -moz-transition: background-color 200ms ease;
+  -o-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
 }
 .main-nav ul li.newsletter-signup .email::-webkit-input-placeholder {
   color: #ffffff;
@@ -533,10 +533,10 @@ h5 {
 }
 .main-nav ul li.newsletter-signup .email:focus {
   background-color: #424d54;
-  -webkit-transition: backgound-color 200ms linear;
-  -moz-transition: backgound-color 200ms linear;
-  -o-transition: backgound-color 200ms linear;
-  transition: backgound-color 200ms linear;
+  -webkit-transition: background-color 200ms ease;
+  -moz-transition: background-color 200ms ease;
+  -o-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
 }
 .main-nav ul li.newsletter-signup .submit-btn {
   position: absolute;
