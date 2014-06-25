@@ -55,6 +55,7 @@ header {
 }
 @media screen and (max-width: 768px) {
   header {
+    height: auto;
     text-align: center;
   }
   .logo {
