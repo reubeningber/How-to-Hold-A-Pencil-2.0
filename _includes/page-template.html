@@ -2,5 +2,6 @@
 
 {{ body }}
 
-{% include 'includes/about-host' %}
-
+{% if url == '/about' %}
+	    {% include 'includes/about-host' %}
+{% endif %}

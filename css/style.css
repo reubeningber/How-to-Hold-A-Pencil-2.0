@@ -561,3 +561,7 @@ h5 {
   -o-transition: color 300ms ease;
   transition: color 300ms ease;
 }
+.host-image {
+  float: left;
+  margin-right: 15px;
+}
