@@ -57,6 +57,7 @@ header {
   header {
     height: auto;
     text-align: center;
+    padding-bottom: 20px;
   }
   .logo {
     width: 65%;
@@ -335,6 +336,9 @@ body {
   font-family: 'Playfair Display', serif;
 }
 @media screen and (max-width: 768px) {
+  .episode {
+    width: 100%;
+  }
   .episode .episode-notes,
   .episode .episode-sponsors {
     float: none;
@@ -386,6 +390,11 @@ body {
 @media screen and (max-width: 600px) {
   .episode-nav .post-nav-name {
     display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .episode-nav {
+    width: 100%;
   }
 }
 .main-nav {
@@ -466,6 +475,13 @@ body {
   .main-nav ul li:hover a {
     color: #ffffff;
     text-decoration: underline;
+  }
+  .main-nav ul li.newsletter-signup {
+    display: block;
+    margin: 0 auto;
+  }
+  .main-nav ul li.newsletter-signup .email {
+    width: 60%;
   }
 }
 @media screen and (max-width: 400px) {
@@ -561,6 +577,21 @@ h5 {
   -moz-transition: color 300ms ease;
   -o-transition: color 300ms ease;
   transition: color 300ms ease;
+}
+@media screen and (max-width: 768px) {
+  .main-nav ul li.newsletter-signup {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 15px;
+  }
+  .main-nav ul li.newsletter-signup .email {
+    height: 35px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .main-nav ul li.newsletter-signup .submit-btn {
+    height: 35px;
+  }
 }
 .host-image {
   float: left;
