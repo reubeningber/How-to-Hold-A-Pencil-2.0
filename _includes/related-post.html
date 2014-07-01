@@ -1,0 +1,19 @@
+<h2 class="episode-sub-hd">You Would Also Like</h2>
+<ul>
+	{% for related_post in parent.posts %}
+	{% for tag in current.taxonomy['tags'].values %}
+	{% if related_post.taxonomy['tags'][tag.slug] and related_post.id != current.id %}
+	<li>
+		<a href="{{related_post.url}}">
+			<div class="img-container">
+				{{related_post.meta['episode-img']}}
+			</div>
+			{{related_post.title}}
+ 		</a>
+	</li>
+	{% break %}
+	{% endif %}
+	{% endfor %}
+	{% if forloop.index == 2 %}{% break %}{% endif %}
+	{% endfor %}
+</ul>
