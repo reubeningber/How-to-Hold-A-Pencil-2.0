@@ -11,7 +11,7 @@
       <pubDate>{{post.date | date_to_rfc822}}</pubDate>
       <author>{{post.user.firstname | xml_escape}} {{post.user.lastname | xml_escape}}</author>
       <guid>{{post.permalink}}</guid>
-      <enclosure url="{{site.permalink}}{{post.meta['episode-img']}}" length="" type="image/jpeg" />
+      <media:content url="{{site.permalink}}{{post.meta['episode-img']}}"/> 
       <description>{{post.body | xml_escape}}</description>
     </item>
     {% endfor %}
