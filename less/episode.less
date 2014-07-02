@@ -165,12 +165,20 @@
 			font-size: 16px;
 		}
 
-		.episode-sponsor {
-			width: 48%;
-			float: left; 
+		.episode-sidebar {
+			width: 100%;
 
-			&:first-child {
-				margin-right: 4%;
+			.sponsors {
+				.clearfix();
+				
+				.episode-sponsor {
+					float: left;
+					width: 48%; 
+
+					&:first-child {
+						margin-right: 4%;
+					}
+				}
 			}
 		}
 	}

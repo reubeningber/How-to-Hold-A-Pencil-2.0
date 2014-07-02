@@ -9,11 +9,12 @@
 				<img src="{{ site.permalink }}{{ related_post.meta['episode-img'] }}" alt="">
 			</div>
 			<h2>{{related_post.title}}</h2>
+			{{ related_post.taxonomy.tags }}
  		</a>
 	</li>
 	{% break %}
 	{% endif %}
 	{% endfor %}
-	{% if forloop.index == 3 %}{% break %}{% endif %}
+	{% if forloop.index == 2 %}{% break %}{% endif %}
 	{% endfor %}
 </ul>
