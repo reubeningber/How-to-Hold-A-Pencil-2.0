@@ -286,20 +286,15 @@ body {
   display: table;
   clear: both;
 }
-.episode .episode-notes.no-sponsors {
-  float: none;
-  width: 100%;
-  margin-right: 0;
-}
-.episode .episode-sponsors {
+.episode .episode-sidebar {
   float: right;
   text-align: center;
   width: 35%;
 }
-.episode .episode-sponsors .episode-sponsor {
+.episode .episode-sidebar .episode-sponsor {
   margin: 15px 0;
 }
-.episode .episode-sponsors .episode-sponsor img {
+.episode .episode-sidebar .episode-sponsor img {
   width: 100%;
 }
 .episode .episode-share-bar {
@@ -596,4 +591,7 @@ h5 {
 .host-image {
   float: left;
   margin-right: 15px;
+}
+.related .related-item .img-container img {
+  width: 100%;
 }

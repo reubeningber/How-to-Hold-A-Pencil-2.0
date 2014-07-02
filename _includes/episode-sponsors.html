@@ -1,0 +1,7 @@
+{% if post.meta['episode-sponsored'] == 'Yes' %}		
+	<h2 class="episode-sub-hd">Sponsors</h2>
+	<ul>
+		<li class="episode-sponsor"><a href="{{post.meta['episode-sponsor-url-1']}}" target="_blank"><img src="{{post.meta['episode-sponsor-img-1']}}" alt=""></a></li>
+		<li class="episode-sponsor"><a href="{{post.meta['episode-sponsor-url-2']}}" target="_blank"><img src="{{post.meta['episode-sponsor-img-2']}}" alt=""></a></li>
+	</ul>
+{% endif %}
