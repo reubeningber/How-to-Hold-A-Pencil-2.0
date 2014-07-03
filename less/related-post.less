@@ -3,6 +3,29 @@
 		.img-container {
 			img {
 				width: 100%;
+				opacity: .75;
+				.lh-transition(opacity 200 ease-out);
+			}
+		}
+
+		h2 {
+			margin: 0;
+			.lh-transition(color 200 linear);
+
+		}
+
+		&:hover {
+			h2 {
+				color: @yellow;
+				.lh-transition(color 200 linear);
+
+			}
+
+			.img-container {
+				img {
+					opacity: 1;
+					.lh-transition(opacity 200 ease-out);
+				}
 			}
 		}
 	}

@@ -1,3 +1,19 @@
+{% if current.title == 'Home'  %}
+	<h2 class="episode-sub-hd">Last Week</h2>
+	<ul class="related">
+		{% if post.previous %}
+		<li class="related-item">
+		<a href="{{post.previous.url}}">
+			<div class="img-container">
+				<img src="{{ site.permalink }}{{ post.previous.meta['episode-img'] }}" alt="">
+			</div>
+			<h2>{{post.previous.title}}</h2>
+ 		</a>
+	</li>
+	{% endif %}
+	</ul>
+{% else %}
+	
 <h2 class="episode-sub-hd">You May Also Like</h2>
 <ul class="related">
 	{% for related_post in parent.posts %}
@@ -17,3 +33,5 @@
 	{% if forloop.index == 3 %}{% break %}{% endif %}
 	{% endfor %}
 </ul>
+
+{% endif %}

@@ -609,6 +609,32 @@ h5 {
 }
 .related .related-item .img-container img {
   width: 100%;
+  opacity: .75;
+  -webkit-transition: opacity 200ms ease-out;
+  -moz-transition: opacity 200ms ease-out;
+  -o-transition: opacity 200ms ease-out;
+  transition: opacity 200ms ease-out;
+}
+.related .related-item h2 {
+  margin: 0;
+  -webkit-transition: color 200ms linear;
+  -moz-transition: color 200ms linear;
+  -o-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.related .related-item:hover h2 {
+  color: #ffd44c;
+  -webkit-transition: color 200ms linear;
+  -moz-transition: color 200ms linear;
+  -o-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.related .related-item:hover .img-container img {
+  opacity: 1;
+  -webkit-transition: opacity 200ms ease-out;
+  -moz-transition: opacity 200ms ease-out;
+  -o-transition: opacity 200ms ease-out;
+  transition: opacity 200ms ease-out;
 }
 @media screen and (max-width: 768px) {
   .related .related-item {
